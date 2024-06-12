@@ -1,0 +1,56 @@
+<%- include('parts/top.ejs') %>
+
+<div class="contact-us section" id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 align-self-center">
+                <div class="section-heading">
+                    <h6>Contact Us</h6>
+                    <h2> <%= contact.titre_contact %></h2>
+                    <p><%= contact.text_contact %></p>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="contact-us-content">
+                    <form id="contact-form" action="/contact" method="post">
+
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <fieldset>
+                                    <input type="name" name="name" id="name" placeholder="Nom complet" autocomplete="on" required>
+                                </fieldset>
+                            </div>
+                            <div class="col-lg-12">
+                                <fieldset>
+                                    <input type="text" name="email" id="email" pattern="[^ @]*@[^ @]*" placeholder="Adresse e-mail" required>
+                                </fieldset>
+                            </div>
+                            <div class="col-lg-12">
+                                <fieldset>
+                                    <input type="number" name="phone" id="phone" placeholder="Numéro de téléphone" required>
+                                </fieldset>
+                            </div>
+                            <div class="col-lg-12">
+                                <fieldset>
+                                    <textarea type="text" name="company" id="company" placeholder="Société" required></textarea>
+                                </fieldset>
+                            </div>
+                            <div class="col-lg-12">
+                                <fieldset>
+                                    <textarea name="message" id="message" placeholder="Your Message" required></textarea>
+                                </fieldset>
+                            </div>
+                            <div class="col-lg-12">
+                                <fieldset>
+                                    <button type="submit" id="form-submit" class="orange-button">Send Message Now</button>
+                                </fieldset>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<%- include('parts/bottom.ejs') %>

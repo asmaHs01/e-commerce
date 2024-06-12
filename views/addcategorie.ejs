@@ -1,0 +1,58 @@
+   
+      <%- include('partsadmin/top')%>
+            <div class="row">
+                <%- include('partsadmin/navbar')%>
+            </div>      
+      
+      <div class="contact-us section" id="contact">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="contact-us-content">
+            <form id="contact-form" method="POST" action="/admin/adminservice" enctype="multipart/form-data">
+               <h1 style="color: white;text-align:center;margin: 20px;">Add new service</h1>
+        <div class="col-lg-12">
+            <input type="text" class="form-control" name="nom_service" placeholder="Title Service">
+        </div>
+        <div class="col-lg-12">
+            <textarea class="form-control" type="text" rows="2" name="description" placeholder=" Description"></textarea>
+        </div>
+        <div class="col-lg-12">
+            <div class="input-group">
+                <input type="number" class="form-control" name="prix" placeholder="Mémoire ">
+            </div>
+        </div>
+        <div class="col-lg-12">
+            <div class="input-group">
+                <input type="text" class="form-control" name="capacite_stockage" placeholder="Capacite de stockage">
+            </div>
+        </div>
+        <div class="col-lg-12">
+            <textarea class="form-control" type="text" rows="1" name="disponibilite" placeholder="Bande passante publique"></textarea>
+        </div>
+        <div class="col-lg-12">
+            <input type="file" class="form-control" name="image">
+        </div>
+
+          
+                  <fieldset>
+                    <button type="submit" id="form-submit" class="orange-button">Add
+            Service</button>
+                  </fieldset>
+
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+ 
+      
+      
+      
+      <%- include ('partsadmin/footer') %>
+        </div>
+    </div>
+    
+
+     <%- include ('partsadmin/bottom') %>

@@ -1,0 +1,64 @@
+<%- include('parts/top.ejs')%>
+<div class="contact-us section" id="contact">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6  align-self-center">
+          <div class="section-heading">
+            <img src="uploads/register.jpg"  height="500px" style="border-radius:500px;" alt="...">
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="contact-us-content">
+            <form id="contact-form" method="POST" action="/register">
+              <% if(msg){ %>
+                    <div  class="alert alert-danger d-flex align-items-center" style="color: rgb(203, 15, 15);text-decoration:underline;">
+                 <%= msg %>
+                    </div>
+                    <% } %>
+
+                <div class="row">
+                    <div class="col">
+                        <label for="exampleFormControlInput1" style="font-size: x-large;" >First name</label>
+                        <input type="text" class="form-control" name="firstname" placeholder="First name">
+                    </div>
+                    <div class="col">
+                       <label for="exampleFormControlInput1" style="font-size: x-large;" >Last name</label>
+                        <input type="text" class="form-control" name="lastname" placeholder="Last name">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="exampleFormControlInput1" style="font-size: x-large;" >Email address</label>
+                    <input type="email" class="form-control" name="email" placeholder="name@example.com">
+                </div>
+                <div class="form-group">
+                    <label for="exampleFormControlInput1" style="font-size: x-large;">Age</label>
+                    <input type="number" class="form-control" name="age" placeholder="your age" min="13" max="100">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1" style="font-size: x-large;" >Password</label>
+                    <input type="password" class="form-control" name="password" placeholder="********" minlength="8">
+                </div>
+                <div class="form-group m-2">
+                    <label for="role" style="font-size: x-large;">Role</label>
+                    <select name="role" id="role">
+                    
+                        <option value="user">User</option>
+                    </select>
+                </div>
+
+                        <button type="submit" id="form-submit" class="orange-button">Register</button>
+
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+<%- include('parts/bottom.ejs')%>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="/https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <title>Elite</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="/css/fontawesome.css">
+    <link rel="stylesheet" href="/css/templatemo-scholar.css">
+    <link rel="stylesheet" href="/css/owl.css">
+    <link rel="stylesheet" href="/css/animate.css">
+    <link rel="stylesheet"href="/https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+
+    <body>
+
+  <!-- ***** Preloader Start ***** -->
+  <div id="js-preloader" class="js-preloader">
+    <div class="preloader-inner">
+      <span class="dot"></span>
+      <div class="dots">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </div>
+
+  <header class="header-area header-sticky">
+    <div class="container ">
+        <div class="row">
+            <div class="col-12">
+                <nav class="main-nav">
+                    <!-- ***** Serach Start ***** -->
+                    <!-- ***** Menu Start ***** -->
+                  <!-- Inside your view files like login.ejs or any other template file -->
+<ul class="nav">
+  <li class="scroll-to-section"><a href="/" >Home</a></li>
+  <li class="scroll-to-section"><a href="/contact">Contact</a></li>
+  <li class="scroll-to-section"><a href="/about">About us</a></li>
+  <li class="scroll-to-section"><a href="/solution">Nos Solutions Clés</a></li>
+      
+  <% if (verifUser) { %>
+    <li class="scroll-to-section"><a href="/services">all services</a></li>
+    <% if (role === 'admin') { %>
+      <li class="scroll-to-section"><a href="/admin" class="active">Dash Admin</a></li>
+    <% } %>
+    
+  <% } else { %>
+    <li class="scroll-to-section"><a href="/login">Sign in</a></li>
+    <li class="scroll-to-section"><a href="/register">Register</a></li>
+  <% } %>
+  
+  <% if (verifUser) { %>
+    
+
+    <form method="POST" action="/logout">
+      <button class="btn btn-outline-danger mt-2" type="submit">Sign up</button>
+    </form>
+  <% } %>
+</ul>
+         
+                    <!-- ***** Menu End ***** -->
+                </nav>
+            </div>
+        </div>
+    </div>
+  </header>

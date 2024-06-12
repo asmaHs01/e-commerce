@@ -1,0 +1,73 @@
+         
+      <%- include('partsadmin/top.ejs')%>
+            <div class="row">
+                <%- include('partsadmin/navbar.ejs')%>
+            </div>
+      <div class="row tm-content-row tm-mt-big">
+                <div class="col-xl-12 col-lg-12 tm-md-12 tm-sm-12 tm-col">
+                    <div class="bg-white tm-block h-100">
+                        <div class="row">
+                            <div class="col-md-8 col-sm-12">
+                                <h2 class="tm-block-title d-inline-block">Services</h2>
+                            </div>
+                            <!--  <div class="col-md-4 col-sm-12 text-right">
+                                <a href="/" class="btn btn-small btn-primary">Add New produit</a>
+                            </div> -->
+                           
+                        </div>
+
+                        <div class="table-responsive">
+                            <table class="table table-hover table-striped tm-table-striped-even mt-3">
+                                <thead>
+                                    <tr class="tm-bg-gray">
+                                        
+                                        <th scope="col" class="text-center">image</th>
+                                        <th scope="col" class="text-center">Nom Service</th>
+                                        <th scope="col" class="text-center">Prix</th>
+                                        <th scope="col" class="text-center">description</th>
+                                        <th scope="col" class="text-center">capacite_stockage</th>
+                                        <th scope="col" class="text-center">disponibilite</th>
+                                        <th scope="col" class="text-center">&nbsp;</th>
+                                        <th scope="col" class="text-center">action</th>
+
+                                    </tr>
+                                </thead>
+                                
+                                <tbody>
+                                    <% for (let service of services) {%>
+                                    <tr>              
+                                        <td>  <img src="/uploads/<%= service.image%>" alt="" style="border-radius:50px;width:200px;"></td>
+                                        <td class="tm-product-name"><%= service.nom_service %></td>
+                                        <td class="text-center"><%= service.prix %> </td>
+                                        <td class="text-center"><%= service.description %></td>
+                                        <td class="text-center"><%= service.capacite_stockage %></td>
+                                        <td class="text-center"><%= service.disponibilite %></td>
+                                        <td>
+                                            <form action="/admin/adminservice/delete/<%= service._id %>" method="POST">
+                                                <button type="submit" class="fas fa-trash-alt tm-trash-icon"></button>
+                                            </form>
+                                        </td>
+                                        <td>
+                                             <a class="btn btn-outline-info" href="/admin/adminservice/update/<%= service._id%>">Update</a>
+                                        </td>
+                                                        
+                                    </tr>
+                                  <% } %>
+                                </tbody>
+                            </table>
+                            <a href="/admin/addcategorie" class="btn btn-primary tm-table-mt">Add New service</a>
+                        </div>
+                   
+                    </div>
+                </div>
+
+               
+            </div>
+       
+      
+      <%- include ('partsadmin/footer.ejs') %>
+        </div>
+    </div>
+    
+
+     <%- include ('partsadmin/bottom.ejs') %>

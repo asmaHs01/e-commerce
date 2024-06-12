@@ -1,0 +1,62 @@
+ <%- include('partsadmin/top') %>
+<div class="row">
+    <%- include('partsadmin/navbar') %>
+</div>
+
+ 
+ 
+ <div class="row tm-mt-big">
+            <div class="col-xl-8 col-lg-10 col-md-12 col-sm-12">
+                <div class="bg-white tm-block">
+                    <div class="row">
+                        <div class="col-12">
+                            <h2 class="tm-block-title d-inline-block">Update Notre Équipe page</h2>
+                        </div>
+                    </div>
+                    <div class="row mt-4 tm-edit-product-row">
+                        <div class="col-xl-7 col-lg-7 col-md-12">
+                            <form method="POST" action="/admin/updateabout" enctype="" class="tm-edit-product-form">
+                        <div class="input-group mb-3">
+                            <label for="firstname" class="col-xl-4 col-lg-4 col-md-4 col-sm-5 col-form-label">Titre</label>
+                            <input type="text" id="firstname" name="titrecontact" class="form-control validate col-xl-9 col-lg-8 col-md-8 col-sm-7" required>
+                        </div>
+                        <div class="input-group mb-3">
+                            <label for="lastname" class="col-xl-4 col-lg-4 col-md-4 col-sm-5 col-form-label">Texte</label>
+                            <textarea type="text" id="lastname" name="lastname" class="form-control validate col-xl-9 col-lg-8 col-md-8 col-sm-7" required></textarea>
+                        </div>                      
+
+                        <div class="row">
+                        <div class="col-12">
+                            <h2 class="tm-block-title d-inline-block">Update À Propos page</h2>
+                        </div>
+                        </div>
+                        
+                        <div class="input-group mb-3">
+                            <label for="lastname" class="col-xl-4 col-lg-4 col-md-4 col-sm-5 col-form-label">Texte</label>
+                            <textarea type="text" id="lastname" name="lastname" class="form-control validate col-xl-9 col-lg-8 col-md-8 col-sm-7" required></textarea>
+                        </div>   
+                       </div>
+
+
+                        <div class="input-group mb-3">
+                            <div class="ml-auto col-xl-8 col-lg-8 col-md-8 col-sm-7 pl-0">
+                                <button type="submit" class="btn btn-primary">Add</button>
+                            </div>
+                        </div>
+                    </form>
+                        </div>
+                    </div>      
+                </div>
+            </div>
+        </div>
+
+
+
+<%- include ('partsadmin/footer') %>
+        </div>
+    </div>
+    
+
+     <%- include ('partsadmin/bottom') %>
+
+

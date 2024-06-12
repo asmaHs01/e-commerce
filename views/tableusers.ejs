@@ -1,0 +1,40 @@
+      
+      <%- include('partsadmin/top')%>
+            <div class="row">
+                <%- include('partsadmin/navbar')%>
+            </div>
+     
+
+      <div class="row tm-content-row tm-mt-big" >
+            <div class="tm-col tm-col-big">
+                <div class="bg-white tm-block">
+                    <div class="row">
+                        <div class="col-md-8 col-sm-12">
+                            <h2 class="tm-block-title d-inline-block">Accounts</h2>
+                        </div>
+                        <div class="col-md-4 col-sm-12 text-right">
+                                <a href="addusers" class="btn btn-small btn-primary">Add New User</a>
+                        </div>
+                        
+                    </div>
+                     
+                    <ol class="tm-list-group tm-list-group-alternate-color tm-list-group-pad-big">
+                         <% for (let user of users) {%>
+                       
+                         <li class="tm-list-group-item" >
+                             <a href="/admin/userdetails/<%= user._id %>" ><%= user.firstname %> <%= user.lastname %> </a>
+                         </li>
+                        <% } %>
+                    </ol>
+                </div>
+            </div>
+            
+        </div>
+     
+
+          <%- include ('partsadmin/footer') %>
+        </div>
+    </div>
+    
+
+     <%- include ('partsadmin/bottom') %>

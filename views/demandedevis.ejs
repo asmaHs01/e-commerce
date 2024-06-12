@@ -1,0 +1,43 @@
+<%- include('partsadmin/top.ejs') %>
+<%- include('partsadmin/navbar.ejs') %>
+
+<h1 style="font-size: xx-large; text-align: center; color: white; margin: 20px;">Demande</h1>
+
+<div class="row tm-content-row tm-mt-big">
+    <% demands.forEach(demand => { %>
+  
+    <div class="tm-col tm-col-big">
+        <div class="bg-white tm-block">
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <span><%= demand.name %></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <span><%= demand.email %></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone:</label>
+                        <span><%= demand.phone %></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="company">Company:</label>
+                        <span><%= demand.company %></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message:</label>
+                        <span><%= demand.message %></span>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+        </div>
+    </div>
+    <% }) %>
+</div>
+
+<%- include('partsadmin/footer.ejs') %>
+<%- include('partsadmin/bottom.ejs') %>

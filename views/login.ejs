@@ -1,0 +1,56 @@
+<%- include('parts/top.ejs')%>
+
+
+<div class="section testimonials">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-7">
+          <div class="owl-carousel owl-testimonials">
+            <div class="item">
+               <form method="POST" action="/login">
+                <% if(msg){ %>
+        <div  class="alert alert-danger d-flex align-items-center" role="alert" style="color: rgb(224, 11, 11);text-decoration:underline;">
+          <%= msg %>
+        </div>
+
+        <% } %>
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="color-white" style="font-size: x-large;">Email address</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                        name="email">
+                    <div id="emailHelp" class="form-text"> W''ell never share your email with anyone else</div>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label" style="font-size: x-large;">Password</label>
+                    <input type="password" class="form-control" id="exampleInputPassword1" name="password">
+                </div>
+                
+                <div class="mb-3">
+                    <a href="register" class="white"> create new account</a>
+                </div>
+    
+                    <button type="submit" style="height: 50px;
+                                                 font-size: 14px;
+                                                 font-weight: 600;
+                                                 background-color: #fff;
+                                                 padding: 0px 25px;
+                                                 border-radius: 25px;
+                                                 color: #7a6ad8;
+                                                 transition: all .4s;
+                                                 position: relative;
+                                                 z-index: 3; "> Login</button>
+            </form>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-5 align-self-center">
+          <div class="section-heading">
+            <img src="/uploads/login.gif" class="card-img-top rounded-pill" height="500px" alt="...">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+    <%- include('parts/bottom.ejs')%>
